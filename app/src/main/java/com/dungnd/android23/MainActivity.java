@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             // để mở ra màn hình mới thì chúng ta intent
             Intent intent = new Intent(this, CodeFresherActivity.class);
             startActivity(intent);
+
         });
     }
 }
