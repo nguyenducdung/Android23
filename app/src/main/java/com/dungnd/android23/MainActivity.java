@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
             Log.d("hihi", "hihi");
+            
             Intent intent = new Intent(this, CodeFresherActivity.class);
             startActivity(intent);
 
