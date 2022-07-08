@@ -23,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        debug();
+        //Tên hàm sai,
+//        TinhGiaTri();
+        //Tên chuẩn
+//        tinhGiaTri();
         //Link biến đến button ở giao diện xml
         btnClickMe = findViewById(R.id.btnClickMe);
 
@@ -56,10 +60,19 @@ public class MainActivity extends AppCompatActivity {
 
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
-            Log.d("hihi", "hihi");
-            Intent intent = new Intent(this, CodeFresherActivity.class);
-            startActivity(intent);
-
+//            Log.d("hihi", "hihi");
+//            Intent intent = new Intent(this, CodeFresherActivity.class);
+//            startActivity(intent);
+            debug();
         });
+    }
+
+    private void debug() {
+        int result = 0;
+        for (int i = 0; i < 10; i++) {
+            result = result + i;
+        }
+        Log.d("hihiabc", result + "");
+        Log.e("hihiabc", result + "");
     }
 }
