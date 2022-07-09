@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstraintHinh2">
+
+    <View
+        android:id="@+id/vImage1"
+        android:layout_width="187dp"
+        android:layout_height="156dp"
+        android:background="#C4C4C4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vImage2"
+        android:layout_width="124dp"
+        android:layout_height="156dp"
+        android:background="#813434"
+        app:layout_constraintStart_toEndOf="@id/vImage1"
+        app:layout_constraintTop_toBottomOf="@id/vImage1" />
+
+    <View
+        android:id="@+id/vImage3"
+        android:layout_width="188dp"
+        android:layout_height="125dp"
+        android:background="#F4B8B8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vImage2" />
+
+    <View
+        android:id="@+id/vImage4"
+        android:layout_width="144dp"
+        android:layout_height="66dp"
+        android:background="#C4C4C4"
+        app:layout_constraintBottom_toBottomOf="@id/vImage3"
+        app:layout_constraintStart_toEndOf="@id/vImage3" />
+
+    <View
+        android:id="@+id/vImage5"
+        android:layout_width="188dp"
+        android:layout_height="156dp"
+        android:background="#312525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vImage3" />
+
+    <View
+        android:layout_width="144dp"
+        android:layout_height="156dp"
+        android:background="#2DB2CF"
+        app:layout_constraintStart_toEndOf="@id/vImage5"
+        app:layout_constraintTop_toBottomOf="@id/vImage4" />
+
+    <View
+        android:id="@+id/vImage6"
+        android:layout_width="336dp"
+        android:layout_height="140dp"
+        android:background="#151443"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="70dp"
+        android:layout_height="140dp"
+        android:background="#4dc868"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vImage6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
