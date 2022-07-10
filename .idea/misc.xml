@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Hello/AndroidStudioProjects/clone/Android23/app/src/main/res/layout/activity_bai1_constraint.xml" value="0.2463768115942029" />
+        <entry key="..\:/Users/Hello/AndroidStudioProjects/clone/Android23/app/src/main/res/layout/activity_bai2_constraint.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hello/AndroidStudioProjects/clone/Android23/app/src/main/res/layout/activity_bai3_constraint.xml" value="0.1" />
+        <entry key="..\:/Users/Hello/AndroidStudioProjects/clone/Android23/app/src/main/res/layout/activity_code_fresher.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hello/AndroidStudioProjects/clone/Android23/app/src/main/res/layout/activity_linear_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hello/AndroidStudioProjects/clone/Android23/app/src/main/res/layout/activity_main.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/Hello/AndroidStudioProjects/clone/Android23/app/src/main/res/layout/dialog_error.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C4C4C4"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="10pt"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#813434"
+        android:gravity="center"
+        android:text="2"
+        android:textSize="10pt"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintStart_toEndOf="@id/text1"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F4B8B8"
+        android:gravity="center"
+        android:text="3"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toTopOf="@id/text5"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        app:layout_constraintWidth_percent=".5"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C4C4C4"
+        app:layout_constraintBottom_toTopOf="@id/text4"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintStart_toEndOf="@id/text3"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        app:layout_constraintWidth_percent=".3" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#312525"
+        android:gravity="center"
+        android:text="4"
+        android:textSize="10pt"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintStart_toStartOf="@+id/text3"
+        app:layout_constraintTop_toBottomOf="@id/text4"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2DB2CF"
+        android:gravity="center"
+        android:text="5"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toTopOf="@id/text8"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintLeft_toRightOf="@id/text5"
+        app:layout_constraintWidth_percent=".3" />
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#151443"
+        android:gravity="center"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintTop_toBottomOf="@+id/text5"
+        app:layout_constraintWidth_percent=".8"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4DC868"
+        android:gravity="center"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintStart_toEndOf="@id/text7"
+        app:layout_constraintTop_toBottomOf="@+id/text5"
+        app:layout_constraintWidth_percent=".2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

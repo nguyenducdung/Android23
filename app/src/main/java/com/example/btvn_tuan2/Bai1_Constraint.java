@@ -1,14 +1,14 @@
-package com.dungnd.android23;
+package com.example.btvn_tuan2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CodeFresherActivity extends AppCompatActivity {
+public class Bai1_Constraint extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_code_fresher);
+        setContentView(R.layout.activity_bai1_constraint);
     }
 }
