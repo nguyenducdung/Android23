@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Link biến đến button ở giao diện xml
-        btnClickMe = findViewById(R.id.btnClickMe);
+        //btnClickMe = findViewById(R.id.btnClickMe);
 
         //Link biến đến textView ở giao diện xml
-        tvName = findViewById(R.id.tvName);
+        //tvName = findViewById(R.id.tvName);
 
         //1 button - nút bấm, sự kiện bấm
 //        btnClickMe.setOnClickListener(new View.OnClickListener() {
