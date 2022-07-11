@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:background="#C4C4C4"
+            android:id="@+id/vMot"
+            android:layout_width="187dp"
+            android:layout_height="156dp"
+            android:layout_weight="1" />
+        <View
+            android:background="#813434"
+            android:id="@+id/vHai"
+            android:layout_width="187dp"
+            android:layout_height="156dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <View
+            android:background="#54C5B0"
+            android:id="@+id/vBa"
+            android:layout_width="126dp"
+            android:layout_height="165dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/vBon"
+            android:layout_width="126dp"
+            android:layout_height="165dp"
+            android:layout_weight="1"
+            android:background="#260D0D" />
+
+        <View
+            android:background="#EF7F7F"
+            android:id="@+id/vNam"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <View
+            android:background="#516561"
+            android:id="@+id/vSau"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+            <View
+                android:background="#9DC8C0"
+                android:id="@+id/vBay"
+                android:layout_width="200dp"
+                android:layout_height="165dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/vTam"
+                    android:layout_width="217dp"
+                    android:layout_height="85dp"
+                    android:layout_weight="1"
+                    android:background="#531F1F" />
+
+                <View
+                    android:id="@+id/vChin"
+                    android:layout_width="217dp"
+                    android:layout_height="79dp"
+                    android:layout_weight="1"
+                    android:background="#C4C4C4" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
