@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".recycleview.RecycleViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Buoi3Activity"
+            android:exported="false" />
+        <activity
             android:name=".ConstrainLayoutActivity"
             android:exported="false" />
         <activity

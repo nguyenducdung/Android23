@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.dungnd.android23.recycleview.RecycleViewActivity;
+
 public class MainActivity extends AppCompatActivity {
     //Khi tạo biến trong activity thì chúng ta nên để private
     private Button btnClickMe;
@@ -61,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
 //            Log.d("hihi", "hihi");
-//            Intent intent = new Intent(this, CodeFresherActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(this, RecycleViewActivity.class);
+            startActivity(intent);
             debug();
         });
     }

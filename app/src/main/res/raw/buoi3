@@ -1,0 +1,28 @@
+1. Button
+- Tạo các nút bấm
+2. Edittext
+- Cần cho người dùng nhập một cái gì đó: text, số, email,...
+- inputType: dùng để cài đặt chế độ nhập
++ text: nhập các string bình thường
++ textEmailAddress: Nhập địa chỉ email
++ number: Nhập số
++ numberPassword: Mật khẩu dạng số
++ textPassword: Mật khẩu dạng text
++ textCapWords: nhập giá trị đầu tiên là in hoa
+3. TextView
+- Hiển thị text cho người dùng
+- font: trong trường hợp các bạn k set font thì mặc định sẽ dùng font của hệ thống
+- textSize: set cỡ chữ (không dùng thì cỡ chữ mặc định là 14sp)
+- textColor: màu chữ
+4. ImageView
+- Hiển thị hình ảnh (png, jpg, webp, ảnh vecto,...)
+- adjustViewBounds: sử dụng khi chúng ta fix cứng chiều cao, và muốn cho ảnh hiển thị
+đúng tỉ lệ chiều dài và chiều cao
+5. RecyclerView
+- Tái chế view
+Ví dụ: các bạn có 1000 item, recycle view chỉ sinh ra 10 view, khi các bạn kéo xuống bên dưới view 11
+RecyclerView sẽ sử dụng lại cái view 1 đẩy data thứ 11 vào view 1
+- Để sử dụng được RecyclerView cần có:
++ ViewHolder(1 item chung)
++ Adapter(quản lý data để đẩy vào các item view)
+- Muốn bắt sự kiện bấm cho recycle view chúng ta sử dụng 1 interface
