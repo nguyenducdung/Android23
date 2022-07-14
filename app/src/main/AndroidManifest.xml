@@ -14,7 +14,19 @@
         android:theme="@style/Theme.Android23"
         tools:targetApi="31">
         <activity
-            android:name=".CodeFresherActivity"
+            android:name=".MayTinhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NhapThongTinCaNhanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DangKyTaiKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PDFRecycleViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfRecycleViewActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
