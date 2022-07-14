@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/roboto_bold"
         android:textColor="#333333"
         android:textSize="18sp"
         tools:text="Nguyễn Đức Dũng" />
@@ -23,7 +22,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="16dp"
-        android:fontFamily="@font/roboto_regular"
+
         android:textSize="16sp"
         tools:text="Tuổi: 20" />
 

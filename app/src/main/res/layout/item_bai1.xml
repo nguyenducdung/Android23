@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:src="@drawable/ic_mobile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:text="Mua bán có tâm"
+        android:textColor="#161616"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/fan"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="16dp"
+        android:text="8K Fan"
+        android:textColor="#161616"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="7dp"
+        android:text="+10 bài viết mới nhất"
+        android:textColor="#8D8D8D"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/fan"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="16dp"
+        android:text="NHÓM ĐÓNG"
+        android:textColor="#8E8E8E"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/post"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:text="                 "
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name="BTVN_buoi3_bai3.RecycleViewBai3"
+            android:exported="false" />
+        <activity
+            android:name="BTVN_buoi3_bai1.RecycleViewBai1"
+            android:exported="false" />
+        <activity
+            android:name="BTVN_buoi3_bai2.RecycleViewBai2"
+            android:exported="false" />
+        <activity
             android:name=".recycleview.RecycleViewActivity"
             android:exported="false" />
         <activity

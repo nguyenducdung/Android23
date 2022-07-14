@@ -8,17 +8,21 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/TVname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Xin chào, mình là Nguyễn Đức Dũng"
-        android:textColor="@color/purple_200"
-        android:textSize="40sp" />
+        android:text="Bài tập về nhà buổi 3"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnClickMe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click me" />
-
+        android:text="Click"
+        android:textSize="20sp"/>
 </LinearLayout>
