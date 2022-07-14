@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Android23</string>
     <string name="name">Nguyễn Đức Dũng</string>
+    <string name="ng_k_t_i_kho_n">Đăng ký tài khoản</string>
+    <string name="t_n_t_i_kho_n">Tên tài khoản</string>
+    <string name="man_hinh_tiep_theo">Man hinh tiep theo</string>
+    <string name="tiep_tuc">Tiếp tục</string>
+    <string name="nh_p_l_i_m_t_kh_u">Nhập lại mật khẩu</string>
+    <string name="nh_p_m_t_kh_u">Nhập mật khẩu</string>
 </resources>
