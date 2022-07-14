@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MayTinhActivity">
+
+    <EditText
+        android:id="@+id/edtSo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="Nhập số"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtSo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="Nhập số"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSo1" />
+
+    <TextView
+        android:id="@+id/txtKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSo2" />
+
+    <Button
+        android:textColor="#000000"
+        android:backgroundTint="#3A92D8"
+        android:textSize="20sp"
+        android:id="@+id/btnCong"
+        android:layout_width="40.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtKetQua" />
+
+    <Button
+        android:textColor="#000000"
+        android:backgroundTint="#3A92D8"
+        android:textSize="20sp"
+        android:id="@+id/btnTru"
+        android:layout_width="40.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/btnCong"
+        app:layout_constraintTop_toBottomOf="@+id/txtKetQua" />
+
+    <Button
+        android:textColor="#000000"
+        android:backgroundTint="#3A92D8"
+        android:textSize="20sp"
+        android:id="@+id/btnNhan"
+        android:layout_width="40.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:text="*"
+        app:layout_constraintStart_toEndOf="@+id/btnTru"
+        app:layout_constraintTop_toBottomOf="@+id/txtKetQua" />
+
+    <Button
+        android:textColor="#000000"
+        android:backgroundTint="#3A92D8"
+        android:textSize="20sp"
+        android:id="@+id/btnChia"
+        android:layout_width="40.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="19dp"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnNhan"
+        app:layout_constraintTop_toBottomOf="@+id/txtKetQua" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

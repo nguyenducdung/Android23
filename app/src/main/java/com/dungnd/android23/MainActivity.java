@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
-            Intent intent = new Intent(this, CodeFresherActivity.class);
+            Intent intent = new Intent(this, PDFRecycleViewActivity.class);
             startActivity(intent);
 
         });

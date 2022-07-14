@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+
+    <ImageView
+
+        android:id="@+id/imgHinh"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTenNhom"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="18dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/imgHinh"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mua bán có tâm" />
+
+    <TextView
+        android:id="@+id/txtFan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="7dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/imgHinh"
+        app:layout_constraintTop_toBottomOf="@+id/txtTenNhom"
+        tools:text="8K Fan" />
+
+    <TextView
+        android:id="@+id/txtBaiViet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toEndOf="@+id/txtFan"
+        app:layout_constraintTop_toBottomOf="@+id/txtTenNhom"
+        tools:text="+ 10 bài viết mới nhất" />
+
+    <TextView
+        android:id="@+id/txtTrangThai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="6dp"
+        android:text="Nhóm Đóng"
+        app:layout_constraintStart_toEndOf="@+id/imgHinh"
+        app:layout_constraintTop_toBottomOf="@+id/txtFan" />
+</androidx.constraintlayout.widget.ConstraintLayout>
