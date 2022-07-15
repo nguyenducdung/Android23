@@ -2,6 +2,7 @@ package com.dungnd.android23;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -9,9 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.telephony.PhoneNumberUtils;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class Bai2Activity extends AppCompatActivity {
     EditText editTextnhapsodienthoai, editTextnhapemail, editTextnhaptendaydu, editTextnhaptencoquan, editTextnhapmatkhau;
@@ -61,7 +66,6 @@ public class Bai2Activity extends AppCompatActivity {
         editTextnhapemail.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
@@ -71,11 +75,15 @@ public class Bai2Activity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(s.toString().equals("hieuhoang01052003@gmail.com")){
-                    textView2.setText("");
-                    check2 = true;
-                }else {
-                    textView2.setText("email không đúng");
+                String email = "";
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                if (email.matches(emailPattern)&& email.length()>0) {
+                    editTextnhapemail.setBackground(ContextCompat.getDrawable(Bai2Activity.this, R.drawable.shapaedittext));
+//                    useremail_layout.setError("valid address");
+                } else  {
+//                    useremail_layout.setError("invalid email");
+//                    ContactsContract.CommonDataKinds.Email.setError(null);
+                    editTextnhapemail.setBackground(ContextCompat.getDrawable(Bai2Activity.this, R.drawable.shape_editext_error));
                 }
             }
         });

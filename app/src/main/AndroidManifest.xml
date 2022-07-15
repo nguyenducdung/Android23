@@ -17,7 +17,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Bai1Activity"
+            android:name=".pdfreader"
             android:exported="false" />
         <activity
             android:name=".Bai3Activity"
@@ -50,7 +50,7 @@
             android:name=".CodeFresherActivity"
             android:exported="false" />
         <activity
-            android:name=".pdfreader"
+            android:name=".Bai1Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

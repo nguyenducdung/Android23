@@ -53,6 +53,7 @@
         android:paddingBottom="12dp"
         android:textSize="17sp" />
 
+
     <EditText
         android:id="@+id/edt_nhapemail"
         android:layout_width="match_parent"
