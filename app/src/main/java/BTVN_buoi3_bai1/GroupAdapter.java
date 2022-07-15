@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dungnd.android23.R;
@@ -70,11 +71,19 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupViewHol
         }
 
         public void setData(Group group) {
-            image.setImageDrawable(context.getDrawable(group.getImage()));
+            image.setImageDrawable(ContextCompat.getDrawable(context, group.getImage()));
             title.setText(group.getTitle());
             fan.setText(group.getFan());
             post.setText(group.getPost());
             close.setText(group.getClose());
+
+            if(group.getClose().equals("NHÓM ĐÓNG")){
+                close.setTextColor(ContextCompat.getColor(context, R.color.black));
+            }else if(group.getClose().equals("NHÓM KÍN")){
+                close.setTextColor(ContextCompat.getColor(context, R.color.purple_200));
+            }else{
+                close.setTextColor(ContextCompat.getColor(context, R.color.purple_500));
+            }
 
 
         }
