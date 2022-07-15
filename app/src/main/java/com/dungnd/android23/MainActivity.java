@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
-            Intent intent = new Intent(this, CodeFresherActivity.class);
+            Intent intent = new Intent(this, Bai1buoi3.class);
             startActivity(intent);
 
         });
