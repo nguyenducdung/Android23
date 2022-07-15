@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edt_nhapso1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shapaedittext"
+        android:hint="Nhập số"
+        android:paddingStart="14dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/edt_nhapso2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shapaedittext"
+        android:hint="Nhập số"
+        android:paddingStart="14dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/edt_ketqua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shapaedittext"
+        android:hint="Kết quả"
+        android:paddingStart="14dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#1F9FFC"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btn_tru"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1F9FFC"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btn_nhan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1F9FFC"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btn_chia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1F9FFC"
+            android:text="/" />
+    </LinearLayout>
+</LinearLayout>
