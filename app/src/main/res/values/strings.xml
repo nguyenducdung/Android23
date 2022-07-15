@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Android23</string>
     <string name="name">Nguyễn Đức Dũng</string>
+    <string name="_tv1">Đăng ký tài khoản</string>
+    <string name="_edt1">ten tai khoan</string>
+    <string name="_edt2">nhap mat khau</string>
+    <string name="_edt3">nhap lai mat khau</string>
+    <string name="_btn1">Tiep tuc</string>
+    <string name="_chuy">Chú ý:\n Tên tài khoản tối thiểu 6 kí tự và không có dấu cách \n mật khẩu tối thiểu 8 ksi tụ và phải trùng nhau \n nếu không đúng điều kiện sẽ hiện lên textView \n thông báo sẽ chuyển sang đỏ</string>
+    <string name="_b2tv1">Nhap thong tin ca nhan</string>
+    <string name="_b2edt1">Nhap so dien thoai</string>
+    <string name="_b2edt2">Nhap Email</string>
+    <string name="_b2edt3">Nhap ten day du</string>
+    <string name="_b2edt4">Nhap ten co quan</string>
+    <string name="_b2edt5">Nhap mat khau</string>
+    <string name="_b3edt1">nhap so</string>
+    <string name="_b3tv1">Ket qua</string>
+    <string name="cong">+</string>
 </resources>

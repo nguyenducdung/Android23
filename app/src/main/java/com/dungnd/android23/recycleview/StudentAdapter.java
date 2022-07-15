@@ -16,7 +16,7 @@ import java.util.List;
 //Có 2 cách để truyền dữ liệu vào adapter (dùng constructor, set get)
 class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
 
-    private List<Student> studentList = null;
+    private List<Student> studentList ;
     private OnItemClick onItemClick;
 
     //C1: truyền dữ liệu vào adapter bằng cách dùng constructor
