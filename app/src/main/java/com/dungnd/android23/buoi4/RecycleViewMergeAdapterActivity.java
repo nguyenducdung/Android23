@@ -36,6 +36,7 @@ public class RecycleViewMergeAdapterActivity extends AppCompatActivity {
         products.add(new Product("Đầu tư quỹ", 10000000L));
         products.add(new Product("Tích luỹ", 10000000L));
         products.add(new Product("Ngân hàng", 10000000L));
+        
         return products;
     }
 
