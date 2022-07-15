@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bai3buoi3">
+    <EditText
+        android:id="@+id/edso1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:hint="Nhập Số"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".16"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/edso2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:hint="Nhập Số"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edso1"
+        app:layout_constraintVertical_bias=".05"
+        app:layout_constraintWidth_percent=".8" />
+    <EditText
+        android:id="@+id/edkq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:text=""
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edso2"
+        app:layout_constraintVertical_bias=".05"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/btnCong"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/edkq"
+        app:layout_constraintTop_toBottomOf="@id/edkq"
+        app:layout_constraintHorizontal_bias=".02"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintWidth_percent=".8" />
+    <Button
+        android:id="@+id/btnTru"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCong"
+        app:layout_constraintTop_toBottomOf="@id/edkq"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/btnNhan"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:text="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnTru"
+        app:layout_constraintTop_toBottomOf="@id/edkq"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/btnChia"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnNhan"
+        app:layout_constraintTop_toBottomOf="@id/edkq"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/btnR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:text="Bai RecycleView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNhan"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintWidth_percent=".8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
