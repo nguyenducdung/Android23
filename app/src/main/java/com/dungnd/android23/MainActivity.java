@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.dungnd.android23.buoi4.RecycleViewGridActivity;
+import com.dungnd.android23.buoi4.RecycleViewHorizontalActivity;
+import com.dungnd.android23.buoi4.RecycleViewMergeAdapterActivity;
 import com.dungnd.android23.recycleview.RecycleViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         //Tên chuẩn
 //        tinhGiaTri();
         //Link biến đến button ở giao diện xml
-        btnClickMe = findViewById(R.id.btnClickMe);
+        btnClickMe = findViewById(R.id.btn1);
+        Button btn2 = findViewById(R.id.btn2);
+        Button btn3 = findViewById(R.id.btn3);
 
         //Link biến đến textView ở giao diện xml
         tvName = findViewById(R.id.tvName);
@@ -66,6 +71,16 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, RecycleViewActivity.class);
             startActivity(intent);
             debug();
+        });
+        btn2.setOnClickListener(v -> {
+
+            Intent intent = new Intent(this, RecycleViewHorizontalActivity.class);
+            startActivity(intent);
+        });
+        btn3.setOnClickListener(v -> {
+
+            Intent intent = new Intent(this, RecycleViewMergeAdapterActivity.class);
+            startActivity(intent);
         });
     }
 

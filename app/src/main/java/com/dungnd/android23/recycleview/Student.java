@@ -1,6 +1,6 @@
 package com.dungnd.android23.recycleview;
 
-class Student {
+public class Student {
    private String name;
    private int age;
    private String mssv;
