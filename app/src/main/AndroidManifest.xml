@@ -55,6 +55,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BTVN_buoi4.ManOneActivity" />
+        <activity android:name=".BTVN_buoi4.ManTwoActivity" />
+        <activity android:name=".BTVN_buoi4.ManThreeActivity" />
     </application>
 
 </manifest>

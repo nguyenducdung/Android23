@@ -11,7 +11,7 @@
         android:id="@+id/TVname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bài tập về nhà buổi 3"
+        android:text="Bài tập về nhà buổi 4"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
