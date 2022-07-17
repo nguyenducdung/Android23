@@ -1,4 +1,4 @@
-package com.dungnd.android23.RecycleView;
+package com.dungnd.android23.RecycleViewBai1;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,26 +36,36 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         }
         holder.imgAvatar.setImageResource(book.getResourceId());
         holder.tvName.setText(book.getName());
+        holder.tvbai.setText(book.getBaiviet());
+        holder.tvFan.setText(book.getFan());
+        holder.tvNhom.setText(book.getNhom());
     }
 
     @Override
     public int getItemCount() {
-        if (mListBook != null){
-            return mListBook.size();
-        }
 
-        return 0;
+
+        return mListBook != null ? mListBook.size() : 0;
     }
 
     public class BookViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imgAvatar;
         private TextView tvName;
+        private TextView tvFan;
+        private TextView tvNhom;
+        private TextView tvbai;
 
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
             imgAvatar = itemView.findViewById(R.id.img_avatar);
             tvName = itemView.findViewById(R.id.tv_name);
+            tvFan = itemView.findViewById(R.id.tvFan);
+            tvNhom = itemView.findViewById(R.id.tvNhom);
+            tvbai = itemView.findViewById(R.id.tvBai);
+
+
+
         }
     }
 }

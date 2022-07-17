@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:src="@drawable/ic_avatar" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/imgAvatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Lê Việt Dương"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            />
+
+        <ImageView
+            android:id="@+id/imgTinh"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/tvName"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_tinh" />
+
+        <TextView
+            android:id="@+id/tvCongdan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imgTinh"
+            android:text="Công dân của Tỉnh"
+            android:textColor="#EB856A" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/TvThongtin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgAvatar"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Các thông tin các nhân chính xác giúp chúng tôi mang lại cho bạn nhưng thông tin thú vị chính xác theo đúng thông tin của bạn."
+        android:textColor="#323B42"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvHoTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TvThongtin"
+        android:layout_marginStart="8dp"
+        android:text="Họ tên đầy đủ"
+        android:textColor="#323B42" />
+
+    <EditText
+        android:id="@+id/edtHoTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHoTen"
+        android:background="@drawable/edt_background"
+        android:hint="Nguyễn Văn A"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+
+
+    <TextView
+        android:id="@+id/TvNs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtHoTen"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Ngày sinh"
+        android:textColor="#323B42"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvSdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtHoTen"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@id/TvNs"
+        android:text="Số ĐT"
+        android:textColor="#323B42"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/btnNgaysinh"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSdt"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="-1dp"
+        android:background="@drawable/button_bg"
+        android:drawableEnd="@drawable/ic_lich"
+        android:hint="27/10/1990"
+        android:inputType="date"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+
+    <EditText
+        android:id="@+id/edtSDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSdt"
+        android:layout_marginStart="60dp"
+        android:layout_toEndOf="@id/btnNgaysinh"
+        android:background="@drawable/edt_background"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnNgaysinh"
+        android:layout_marginTop="24dp"
+        android:text="Email"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmail"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edt_background"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tvSocmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtEmail"
+        android:layout_marginTop="26dp"
+        android:text="Số CMT"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/edtSocmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSocmt"
+        android:background="@drawable/edt_background"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <Button
+        android:id="@+id/btnCapnhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSocmt"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/edt_background"
+        android:text="Cập Nhập Thông Tin" />
+</RelativeLayout>

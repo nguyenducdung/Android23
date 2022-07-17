@@ -10,25 +10,58 @@
 
     <ImageView
         android:id="@+id/img_avatar"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_book" />
-    <LinearLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:src="@drawable/ic_phone" />
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/img_avatar"
        android:layout_marginStart="10dp"
         android:orientation="vertical">
-        <TextView
 
+        <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="To Kill a Mockingbird"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="1dp"
+            android:text="Mua bán có tâm"
             android:textColor="@android:color/black"
-            android:textSize="25sp"
+            android:textSize="18sp" />
+        <TextView
+
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/tv_name"
+            android:id="@+id/tvFan"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:text="8K Fan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             />
-    </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNhom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFan"
+            android:layout_marginStart="16dp"
+            android:text="Nhóm Đóng"
+            android:textAllCaps="true" />
+        <TextView
+            android:id="@+id/tvBai"
+            android:layout_marginStart="16sp"
+            android:layout_below="@id/tv_name"
+            android:layout_toEndOf="@id/tvFan"
+            android:textAllCaps="true"
+            android:text="+10 bài viết mới nhất"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
 
 
 

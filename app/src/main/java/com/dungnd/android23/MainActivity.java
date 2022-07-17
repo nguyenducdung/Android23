@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.dungnd.android23.RecycleViewBai1.RecycleViewActivity;
+import com.dungnd.android23.buoi4bai3.RecycleViewActivity2;
 
 public class MainActivity extends AppCompatActivity {
     //Khi tạo biến trong activity thì chúng ta nên để private
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
-            Intent intent = new Intent(this, Bai1buoi3.class);
+            Intent intent = new Intent(this, Buoi5Activity.class);
             startActivity(intent);
 
         });
