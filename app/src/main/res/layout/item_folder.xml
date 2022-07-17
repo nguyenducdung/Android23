@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="76dp"
+        android:layout_height="86dp"
+        android:src="@drawable/ic_folder" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img_avatar"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="1dp"
+            android:text="Video"
+            android:textColor="@android:color/black"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tvXoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="1dp"
+            android:text="X"
+            android:textColor="@android:color/black"
+            android:textSize="26sp" />
+        <ImageView
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@id/tvXoa"
+            android:src="@drawable/ic_pen"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"/>
+        
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
