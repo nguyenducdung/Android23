@@ -13,12 +13,17 @@ import android.widget.TextView;
 import com.dungnd.android23.buoi4.RecycleViewGridActivity;
 import com.dungnd.android23.buoi4.RecycleViewHorizontalActivity;
 import com.dungnd.android23.buoi4.RecycleViewMergeAdapterActivity;
+import com.dungnd.android23.buoi5.KotlinActivity;
+import com.dungnd.android23.buoi5.OnClick;
+import com.dungnd.android23.buoi5.PhuongTrinhActivity;
+import com.dungnd.android23.buoi5.StudentKotlin;
 import com.dungnd.android23.recycleview.RecycleViewActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnClick, View.OnClickListener {
     //Khi tạo biến trong activity thì chúng ta nên để private
     private Button btnClickMe;
     private TextView tvName;
+    private int count;
 
     //Sự khác nhau giữa int và Integer là gì không?
     int position = 0; //kiểu số nguyên, không có trường hợp null (k có gì)
@@ -82,6 +87,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, RecycleViewMergeAdapterActivity.class);
             startActivity(intent);
         });
+        findViewById(R.id.btnKotlin).setOnClickListener(v -> {
+            startActivity(new Intent(this, KotlinActivity.class));
+        });
+        findViewById(R.id.btnPhuongTrinh).setOnClickListener(v -> {
+            startActivity(new Intent(this, PhuongTrinhActivity.class));
+        });
     }
 
     private void debug() {
@@ -92,4 +103,27 @@ public class MainActivity extends AppCompatActivity {
         Log.d("hihiabc", result + "");
         Log.e("hihiabc", result + "");
     }
+
+    //Hàm không trả về giá trị (hàm void)
+    private void logLinhTinh(String result) {
+        Log.d("hihiabc",   result + "");
+        Log.e("hihiabc", "");
+    }
+
+    @Override
+    public void clicked() {
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
+    }
+//
+//    private int tinhTong(int a, int b) {
+//        StudentKotlin studentKotlin = new StudentKotlin();
+//        studentKotlin.setName("111");
+//        studentKotlin.setAge(10);
+//        return a + b;
+//    }
 }
