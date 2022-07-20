@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Android23</string>
     <string name="name">Nguyễn Đức Dũng</string>
+    <string name="ho_ng_trung_hi_u">HOÀNG TRUNG HIẾU</string>
+    <string name="thongtin">Các thông tin cá nhân chính xác giúp chúng tôi\nmang lại cho bạn những thông tin thú vị chính\n xác theo đúng thông tin của bạn</string>
+    <string name="nameuser">HOÀNG TRUNG HIẾU</string>
+    <string name="position">Công dân của Tỉnh</string>
+    <string name="fullname">Họ tên đầy đủ</string>
+    <string name="nva">Nguyễn Văn A</string>
+    <string name="birthday">Ngày sinh</string>
+    <string name="phonenumber">Số ĐT</string>
+    <string name="emailaddress">E-mail</string>
+    <string name="CMT">Số CMT</string>
+    <string name="confirm">Cập nhật thông tin</string>
 </resources>
