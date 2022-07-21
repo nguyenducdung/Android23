@@ -15,6 +15,8 @@ import com.dungnd.android23.BTVN_buoi4.ManThreeActivity;
 import com.dungnd.android23.BTVN_buoi4.ManTwoActivity;
 import com.dungnd.android23.recycleview.RecycleViewActivity;
 
+import BTVN_buoi5.KotlinActivity;
+
 public class MainActivity extends AppCompatActivity {
     //Khi tạo biến trong activity thì chúng ta nên để private
     private Button btnClickMe;
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
 //            Log.d("hihi", "hihi");
-            Intent intent = new Intent(this, ManTwoActivity.class);
+            Intent intent = new Intent(this, KotlinActivity.class);
             startActivity(intent);
             debug();
         });
