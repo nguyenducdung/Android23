@@ -3,9 +3,12 @@ package com.dungnd.android23.buoi5
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dungnd.android23.R
+import com.dungnd.android23.buoi6.giaiPhuongTrinh
+import com.dungnd.android23.buoi6.showName
 
 class KotlinActivity : AppCompatActivity(), OnClick, View.OnClickListener {
 
@@ -33,6 +36,7 @@ class KotlinActivity : AppCompatActivity(), OnClick, View.OnClickListener {
         student.name = "Nguyễn Đức Dũng"
         student.age = 30
         student.high = 100
+        giaiPhuongTrinh()
 
         //Set dữ liệu kiểu 2
         val student2 = StudentKotlin(10).apply {
@@ -96,6 +100,8 @@ class KotlinActivity : AppCompatActivity(), OnClick, View.OnClickListener {
 
         //Trả về phần tử đầu tiên có tên == "abc", nếu k có thì trả về null
         studentList.firstOrNull { it.name == "abc" }
+        var tvAbc: TextView? = null
+        tvAbc?.showName()
 
     }
 

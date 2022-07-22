@@ -13,6 +13,9 @@ public class Student {
       this.address = address;
    }
 
+   public Student() {
+   }
+
    public String getName() {
       return name;
    }

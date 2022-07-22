@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".buoi6.Buoi6Activity"
+            android:exported="false" />
+        <activity
             android:name=".buoi5.PhuongTrinhActivity"
             android:exported="false" />
         <activity
