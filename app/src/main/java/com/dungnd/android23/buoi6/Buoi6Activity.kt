@@ -51,6 +51,12 @@ class Buoi6Activity : AppCompatActivity() {
             //todo it
             print(it.name)
         }
+
+        val chat = Chat().apply {
+            this.image = R.drawable.ic_food
+            this.title = "Nguyen Duc Dung"
+            this.content = "Ancsfasdfasf"
+        }
     }
 
     private fun goiApiTinhABC(callback: ((String) -> Unit)) {
