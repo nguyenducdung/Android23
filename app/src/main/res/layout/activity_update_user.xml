@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chuabtvn5.UpdateUserActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:title="Cá nhân hoá" />
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"
+        android:background="#DBDBDB" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnUpdate"
+        android:layout_below="@id/vDivider">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/iv_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Nguyễn Việt Dương"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawablePadding="4dp"
+                android:text="Công dân của tỉnh"
+                android:textColor="#EB856A"
+                app:drawableStartCompat="@drawable/ic_avatar_vector"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Các thông tin các nhân chính xác giúp chúng tôi mang lại cho bạn những thông tin thú vị chính xác theo đúng thông tin của bạn."
+                android:textColor="#323B42"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/ivAvatar"
+                app:layout_constraintTop_toBottomOf="@id/ivAvatar" />
+
+            <TextView
+                android:id="@+id/tvFullNameTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/full_name_title"
+                android:textColor="#323B42"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/ivAvatar"
+                app:layout_constraintTop_toBottomOf="@id/tvContent" />
+
+            <EditText
+                android:id="@+id/edtFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Nguyễn Văn A"
+                android:inputType="text"
+                android:maxLength="50"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tvFullNameTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/tvFullNameTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvFullNameTitle" />
+
+            <TextView
+                android:id="@+id/tvDateTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Ngày sinh"
+                app:layout_constraintEnd_toStartOf="@id/tvPhoneTitle"
+                app:layout_constraintStart_toStartOf="@id/edtFullName"
+                app:layout_constraintTop_toBottomOf="@id/edtFullName" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="27/10/1990"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="16sp"
+                app:drawableEndCompat="@drawable/ic_avatar_vector"
+                app:layout_constraintEnd_toEndOf="@id/tvDateTitle"
+                app:layout_constraintStart_toStartOf="@id/tvDateTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvDateTitle" />
+
+            <TextView
+                android:id="@+id/tvPhoneTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Số ĐT"
+                app:layout_constraintEnd_toEndOf="@id/edtFullName"
+                app:layout_constraintStart_toEndOf="@id/tvDateTitle"
+                app:layout_constraintTop_toTopOf="@id/tvDateTitle" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_edittext"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/tvPhoneTitle"
+                app:layout_constraintStart_toStartOf="@id/tvPhoneTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button_enable"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Cập nhật thông tin"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

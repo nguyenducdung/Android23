@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Android23</string>
     <string name="name">Nguyễn Đức Dũng</string>
+    <string name="full_name_title">Họ tên đầy đủ <font color="#E40000">*</font></string>
 </resources>
