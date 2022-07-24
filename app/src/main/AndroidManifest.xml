@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name="BTVN_buoi6_bai2.DogActivity"
+            android:exported="false" />
+        <activity
+            android:name="BTVN_buoi6_bai1.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name="BTVN_buoi5.KotlinActivity"
             android:exported="false" />
         <activity
