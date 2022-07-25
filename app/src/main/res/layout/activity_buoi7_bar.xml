@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".buoi7.Buoi7BarActivity">
 
+    <include layout="@layout/layout_toolbar"
+        android:id="@+id/toolbar"/>
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vpPage"
         android:layout_width="match_parent"
