@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home1"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Trang chủ1" />
+    <item
+        android:id="@+id/home2"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Trang chủ2" />
+    <item
+        android:id="@+id/home3"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Trang chủ3" />
+    <item
+        android:id="@+id/home4"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Trang chủ4" />
+</menu>

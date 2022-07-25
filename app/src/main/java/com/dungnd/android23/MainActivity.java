@@ -19,6 +19,7 @@ import com.dungnd.android23.buoi5.PhuongTrinhActivity;
 import com.dungnd.android23.buoi5.StudentKotlin;
 import com.dungnd.android23.buoi6.Buoi6Activity;
 import com.dungnd.android23.buoi6.Database;
+import com.dungnd.android23.buoi7.Buoi7Activity;
 import com.dungnd.android23.recycleview.RecycleViewActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClick, View.OnClickListener {
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements OnClick, View.OnC
             startActivity(new Intent(this, KotlinActivity.class));
         });
         findViewById(R.id.btnPhuongTrinh).setOnClickListener(v -> {
-            startActivity(new Intent(this, Buoi6Activity.class));
+            startActivity(new Intent(this, Buoi7Activity.class));
         });
         Database.INSTANCE.suaDuLieu();
     }

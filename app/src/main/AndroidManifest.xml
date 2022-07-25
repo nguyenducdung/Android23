@@ -17,6 +17,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".buoi7.Buoi7BarActivity"
+            android:theme="@style/NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".buoi7.Buoi7HaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".buoi7.Buoi7Activity"
+            android:exported="false" />
+        <activity
             android:name=".buoi6.Buoi6Activity"
             android:exported="false" />
         <activity

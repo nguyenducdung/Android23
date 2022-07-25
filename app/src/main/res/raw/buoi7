@@ -1,0 +1,7 @@
+1. Truyền dữ liệu giữa các màn hình
+- Giữa các activity với nhau
++ Intent.putExtra(key, value)
++ Truyền ngược lại bằng launcher (Từ màn sau back về màn trước)
+- Giữa activity với fragment, fragment với fragment
++ bundle.putString(key, value)
++ bundle.putParc...
