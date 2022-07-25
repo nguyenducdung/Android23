@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgAnh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/file"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng hợp tin tức thời sự"
+        android:layout_toRightOf="@+id/imgAnh"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng hợp tin tức thời sự"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/imgAnh"
+        android:layout_below="@+id/tv1"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        />
+
+
+
+</RelativeLayout>
