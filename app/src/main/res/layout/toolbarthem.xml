@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_marginStart="15dp"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:textColor="#007AFF"
+        android:text="Hủy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/tv_luu"
+        android:id="@+id/tv_edit"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Thêm thư mục"
+        android:layout_toEndOf="@id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_luu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:text="Lưu"
+        android:textColor="#007AFF"
+        android:textSize="18sp" />
+</RelativeLayout>
