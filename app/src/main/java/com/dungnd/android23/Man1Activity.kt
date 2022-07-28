@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class Man1Activity : AppCompatActivity() {
+class Man1Activity() : AppCompatActivity() {
     private var recyclerView : RecyclerView? = null
     private var tvthem : TextView? = null
     private var tenthumuc : String? = null
     private var motathumuc : String? = null
+    var content : String? = null
+    var title : String? = null
     private val array : ArrayList<Folder> = ArrayList()
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,5 +51,7 @@ class Man1Activity : AppCompatActivity() {
             val intent = Intent(this, Man3Activity::class.java)
             startForResult1.launch(intent)
         }
+        title = intent.getStringExtra("datatitle2")
+        content = intent.getStringExtra("datacontent2")
     }
 }

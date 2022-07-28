@@ -27,10 +27,10 @@ class Man2Activity : AppCompatActivity() {
         edttitle?.text = edittabletitle
         edtcontent?.text = editablecontent
         tvsua?.setOnClickListener {
-            val intent : Intent = Intent()
+            val intent : Intent = Intent(this, Man1Activity::class.java)
             intent.putExtra("datatitle2", edttitle?.text.toString())
             intent.putExtra("datacontent2", edtcontent?.text.toString())
-            setResult(Activity.RESULT_OK, intent)
+            startActivity(intent)
             finish()
         }
     }

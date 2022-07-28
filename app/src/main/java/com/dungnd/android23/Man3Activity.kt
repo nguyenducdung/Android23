@@ -17,9 +17,9 @@ class Man3Activity : AppCompatActivity() {
         tvluu = findViewById(R.id.tv_luu)
         edttenthumuc = findViewById(R.id.edt_tenthumuc)
         edtmota = findViewById(R.id.edt_motathumuc)
-        val tenthumuc : String = edttenthumuc?.text.toString()
-        val motathumuc : String = edtmota?.text.toString()
         tvluu?.setOnClickListener {
+            val tenthumuc : String = edttenthumuc?.text.toString()
+            val motathumuc : String = edtmota?.text.toString()
             val intent : Intent = Intent()
             intent.putExtra("datatenthumuc", tenthumuc)
             intent.putExtra("datamota", motathumuc)

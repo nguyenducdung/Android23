@@ -1,5 +1,6 @@
 package com.dungnd.android23
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -21,6 +22,7 @@ class RecyclerviewAdapter(var context : Context, var array : ArrayList<Folder>) 
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.itemlayout, parent, false)
         return Itemholder(view)
     }
+    @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: Itemholder, position: Int) {
         val person = array.get(position)
         holder.tvtitle.text = person.title
@@ -33,6 +35,11 @@ class RecyclerviewAdapter(var context : Context, var array : ArrayList<Folder>) 
             intent.putExtra("datacontent", content)
             context.startActivity(intent)
         }
+        val title : String? = Man1Activity().title
+        val content : String? = Man1Activity().content
+        holder.tvtitle.text = title
+        holder.tvcontent.text = content
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {
