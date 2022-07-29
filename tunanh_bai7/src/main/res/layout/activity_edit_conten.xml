@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".EditConten">
+    <include layout="@layout/toolbar"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edt_folder_name"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edt_background"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:textColor="@color/textcolor1"
+        android:hint="@string/enter_folder_name"
+        android:maxLines="1"
+         />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edt_folder_description"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="start"
+        android:background="@drawable/edt_background"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:textColor="@color/textcolor1"
+        android:hint="@string/enter_folder_description"
+
+        />
+
+
+</LinearLayout>

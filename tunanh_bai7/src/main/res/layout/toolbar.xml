@@ -1,31 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="?android:actionBarSize">
 
     <ImageView
+        android:id="@+id/img_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:padding="10dp"
-        android:src="@drawable/ic_back" />
+        android:src="@drawable/ic_back"
+        tools:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/text_blue"
+        android:text="@string/cancel"
+        />
 
     <TextView
+        android:id="@+id/tv_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:fontFamily="serif"
         android:text="@string/manager_fodel"
-        android:textColor="@color/black"
+        android:textColor="@color/textcolor1"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/tv_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:text="@string/add"
+        android:padding="10dp"
         android:textColor="@color/text_blue"
         android:textSize="16sp" />
 
@@ -33,6 +51,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/black" />
+        android:background="@color/colorOnPrimary" />
 
 </RelativeLayout>
