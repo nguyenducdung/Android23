@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_food"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+    <TextView
+        android:id="@+id/tvFolderTitle"
+        android:text="Tong hop tin tuc thoi su"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="18dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvFolderNotice"
+        app:layout_constraintStart_toStartOf="@id/tvFolderTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvFolderTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các tin tuc cua  "
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/vDivider"
+        app:layout_constraintTop_toBottomOf="@id/ivAvatar"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
