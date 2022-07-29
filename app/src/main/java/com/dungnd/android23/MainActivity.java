@@ -1,8 +1,5 @@
 package com.dungnd.android23;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,16 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.dungnd.android23.buoi4.RecycleViewGridActivity;
-import com.dungnd.android23.buoi4.RecycleViewHorizontalActivity;
-import com.dungnd.android23.buoi4.RecycleViewMergeAdapterActivity;
-import com.dungnd.android23.buoi5.KotlinActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.dungnd.android23.buoi5.OnClick;
-import com.dungnd.android23.buoi5.PhuongTrinhActivity;
-import com.dungnd.android23.buoi5.StudentKotlin;
-import com.dungnd.android23.buoi6.Buoi6Activity;
 import com.dungnd.android23.buoi6.Database;
-import com.dungnd.android23.buoi7.Buoi7Activity;
+import com.dungnd.android23.buoi8.Buoi8Activity;
 import com.dungnd.android23.recycleview.RecycleViewActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClick, View.OnClickListener {
@@ -80,21 +72,21 @@ public class MainActivity extends AppCompatActivity implements OnClick, View.OnC
             startActivity(intent);
             debug();
         });
-        btn2.setOnClickListener(v -> {
+//        findViewById(R.id.btnKotlin).setOnClickListener(v -> {
+//            startActivity(new Intent(this, KotlinActivity.class));
+//        });
+//        findViewById(R.id.btnPhuongTrinh).setOnClickListener(v -> {
+//            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "03734907220"));
+//            startActivity(intent);
+////            startActivity(new Intent(this, Buoi7Activity.class));
+//        });
+        findViewById(R.id.btnKotlin).setOnClickListener(new SingleClickListener() {
+            @Override
+            public void onClick(View view) {
+                super.onClick(view);
 
-            Intent intent = new Intent(this, RecycleViewHorizontalActivity.class);
-            startActivity(intent);
-        });
-        btn3.setOnClickListener(v -> {
-
-            Intent intent = new Intent(this, RecycleViewMergeAdapterActivity.class);
-            startActivity(intent);
-        });
-        findViewById(R.id.btnKotlin).setOnClickListener(v -> {
-            startActivity(new Intent(this, KotlinActivity.class));
-        });
-        findViewById(R.id.btnPhuongTrinh).setOnClickListener(v -> {
-            startActivity(new Intent(this, Buoi7Activity.class));
+                startActivity(new Intent(MainActivity.this, Buoi8Activity.class));
+            }
         });
         Database.INSTANCE.suaDuLieu();
     }
