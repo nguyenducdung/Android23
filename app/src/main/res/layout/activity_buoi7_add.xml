@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <include layout="@layout/layouttoolbar_add"
+        android:id="@+id/toolbar"/>
+    <EditText
+        android:layout_below="@id/toolbar"
+        android:id="@+id/edtPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_edit_buoi7"
+        android:padding="14dp"
+        android:hint="Nhập tên thư mục" />
+
+
+    <EditText
+        android:id="@+id/edtContent"
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:layout_below="@+id/edtPost"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_edit_buoi7"
+        android:gravity="top"
+        android:hint="Nhập mô tả thực"
+        android:padding="19dp" />
+
+</RelativeLayout>

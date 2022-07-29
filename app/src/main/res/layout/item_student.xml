@@ -27,11 +27,11 @@
         tools:text="Tuổi: 20" />
 
     <View
+        android:id="@+id/vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvAge"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:id="@+id/vDivider"
-        android:layout_below="@id/tvAge"
-        android:background="#03ABC2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"/>
+        android:background="#03ABC2" />
 </RelativeLayout>
