@@ -44,5 +44,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Giải Phương trình" />
+    <Button
+        android:id="@+id/btnbai7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="btvn buoi 7" />
+
 
 </LinearLayout>

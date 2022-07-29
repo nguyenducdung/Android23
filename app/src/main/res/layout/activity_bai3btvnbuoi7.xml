@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buoi7.Buoi7BarActivity">
+
+    <include layout="@layout/layout_toolbar3"
+        android:id="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/edSukien"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+
+        android:background="@drawable/edt_background"
+        android:text="Tổng hợp tin tức sự kiện"
+        android:textColor="@android:color/black"
+        android:paddingStart="16dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvCmt"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/edSukien"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edt_background"
+        android:textColor="@android:color/black"
+        android:text="Tổng hợp tin tức thời sự nóng hổi nhất, của tất cả các báo nổi nhất hiện nay"
+        android:paddingStart="10dp"
+        android:paddingBottom="95dp"
+
+        />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnvData"
+        app:menu="@menu/menu"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

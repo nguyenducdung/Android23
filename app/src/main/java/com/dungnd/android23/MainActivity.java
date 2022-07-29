@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.dungnd.android23.FolderRecycleView.Tab1Activity;
 import com.dungnd.android23.buoi4.RecycleViewGridActivity;
 import com.dungnd.android23.buoi4.RecycleViewHorizontalActivity;
 import com.dungnd.android23.buoi4.RecycleViewMergeAdapterActivity;
@@ -95,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements OnClick, View.OnC
         });
         findViewById(R.id.btnPhuongTrinh).setOnClickListener(v -> {
             startActivity(new Intent(this, Buoi7Activity.class));
+        });
+        findViewById(R.id.btnbai7).setOnClickListener(v ->{
+            startActivity(new Intent(this, Tab1Activity.class));
         });
         Database.INSTANCE.suaDuLieu();
     }
