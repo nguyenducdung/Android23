@@ -1,21 +1,25 @@
 package com.dungnd.android23
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.RecyclerView
+import com.dungnd.android23.chuabtvn7.Folder
+import com.dungnd.android23.chuabtvn7.Man2Activity
 
 class RecyclerviewAdapter(var context : Context, var array : ArrayList<Folder>) : RecyclerView.Adapter<RecyclerviewAdapter.Itemholder>() {
     class Itemholder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var tvtitle : TextView = itemView.findViewById(R.id.tv_title)
         var tvcontent : TextView = itemView.findViewById(R.id.tv_content)
     }
+
+    //A muốn biết lấy cái object, vị trí khi click vào item
+    var onItemClick: ((Folder, Int) -> Unit)? = null
+
+    var onItemClick2: ((Folder) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Itemholder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.itemlayout, parent, false)
@@ -26,12 +30,13 @@ class RecyclerviewAdapter(var context : Context, var array : ArrayList<Folder>) 
         holder.tvtitle.text = person.title
         holder.tvcontent.text = person.content
         holder.itemView.setOnClickListener {
-            val title : String = holder.tvtitle.text.toString()
-            val content : String = holder.tvcontent.text.toString()
-            val intent : Intent = Intent(context, Man2Activity::class.java)
-            intent.putExtra("datatitle", title)
-            intent.putExtra("datacontent", content)
-            context.startActivity(intent)
+            onItemClick?.invoke(array.get(position), position)
+//            val title : String = holder.tvtitle.text.toString()
+//            val content : String = holder.tvcontent.text.toString()
+//            val intent : Intent = Intent(context, Man2Activity::class.java)
+//            intent.putExtra("datatitle", title)
+//            intent.putExtra("datacontent", content)
+//            context.startActivity(intent)
         }
     }
 

@@ -17,10 +17,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Man3Activity"
+            android:name=".chuabtvn7.Man3Activity"
             android:exported="false" />
         <activity
-            android:name=".Man2Activity"
+            android:name=".chuabtvn7.Man2Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -75,7 +75,7 @@
             android:name=".CodeFresherActivity"
             android:exported="false" />
         <activity
-            android:name=".Man1Activity"
+            android:name=".chuabtvn7.Man1Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
