@@ -9,7 +9,6 @@ import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,18 +26,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initView()
         handletoolbar()
-        sqlite= Sqlite(this)
+        sqlite=Sqlite.getDatabase(this)
         initRecyclerView()
 
-        adapter?.setonClickitem {
-            Toast.makeText(this, it.title, Toast.LENGTH_SHORT).show()
-        }
+
     }
 
     private fun getFolder() {
-        val fdList=sqlite.getallFolder()
+        val fdList=sqlite.folderitemDao().getAllFolder()
         Log.e("Main","${fdList.size}")
-        adapter?.additem(fdList)
+        adapter?.additem(fdList as ArrayList<FolderModel>)
     }
 
     private fun initRecyclerView() {
@@ -46,6 +43,13 @@ class MainActivity : AppCompatActivity() {
         adapter = FolderAdapter()
         getFolder()
         rclv.adapter = adapter
+        adapter?.onItemClick={folder,position->
+            val intent=Intent(this,EditConten::class.java)
+            intent.putExtra(type,true)
+            intent.putExtra("title",folder.title)
+            intent.putExtra("content",folder.content)
+            startActivity(intent)
+        }
     }
 
 
@@ -105,3 +109,7 @@ class MainActivity : AppCompatActivity() {
         const val type = "type"
     }
 }
+
+
+
+

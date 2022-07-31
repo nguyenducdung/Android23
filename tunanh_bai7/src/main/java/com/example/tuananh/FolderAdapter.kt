@@ -1,22 +1,20 @@
 package com.example.tuananh
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.AdapterListUpdateCallback
 import androidx.recyclerview.widget.RecyclerView
 
 class FolderAdapter : RecyclerView.Adapter<FolderAdapter.FolderViewHolder>() {
     private var fdList:ArrayList<FolderModel> = ArrayList()
-    private var onClickITem :((FolderModel)-> Unit)?=null
+//    private var onClickITem :((FolderModel)-> Unit)?=null
     fun additem(item:ArrayList<FolderModel>){
         this.fdList=item
         notifyDataSetChanged()
     }
-    fun setonClickitem(callback: (FolderModel)->Unit){
-        this.onClickITem=callback
-    }
+    var onItemClick: ((FolderModel, Int) -> Unit)? = null
     class FolderViewHolder(v:View):RecyclerView.ViewHolder(v){
         private var title=v.findViewById<TextView>(R.id.title_item)
         private var content=v.findViewById<TextView>(R.id.content_item)
@@ -33,7 +31,9 @@ class FolderAdapter : RecyclerView.Adapter<FolderAdapter.FolderViewHolder>() {
     override fun onBindViewHolder(holder: FolderViewHolder, position: Int) {
         val fd=fdList[position]
         holder.bindView(fd)
-        holder.itemView.setOnClickListener{onClickITem?.invoke(fd)}
+        onItemClick?.invoke(fdList.get(position), position)
+//        holder.setOnClickListener{onClickITem?.invoke(fd)}
+//        setonClickitem(onClickITem?.invoke(fd),position)
     }
 
     override fun getItemCount(): Int {
