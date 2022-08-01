@@ -1,40 +1,47 @@
-package com.dungnd.android23
+package com.dungnd.android23.chuabtnv8
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dungnd.android23.R
+import com.dungnd.android23.buoi8.AppRoomDatabase
 
 class Man1Activity : AppCompatActivity() {
     private var linearLayout : LinearLayout? = null
     private var recyclerView : RecyclerView? = null
     private var array : ArrayList<User> = ArrayList()
+    private var userDao: UserDao? = null
+    private var recyclerviewAdappter: RecyclerviewAdappter? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_man1)
         linearLayout = findViewById(R.id.linearlayout)
         recyclerView = findViewById(R.id.recyclerview)
-        val linearLayoutManager = LinearLayoutManager(this)
-        recyclerView?.layoutManager = linearLayoutManager
-        array.add(User(1,"Võ Hữu Thịnh", "Triều Khúc, Thanh Xuân, Hà Nội", "0962890153"))
-        array.add(User(2,"Võ Hữu Thịnh", "Triều Khúc, Thanh Xuân, Hà Nội", "0962890153"))
-        array.add(User(3,"Võ Hữu Thịnh", "Triều Khúc, Thanh Xuân, Hà Nội", "0962890153"))
-        array.add(User(4,"Võ Hữu Thịnh", "Triều Khúc, Thanh Xuân, Hà Nội", "0962890153"))
-        val recyclerviewAdappter = RecyclerviewAdappter(array)
+        userDao = AppRoomDatabase.getDatabase(this).userDao()
+        array = (userDao?.getAllUser() as? ArrayList<User>) ?: ArrayList()
+
+        recyclerviewAdappter = RecyclerviewAdappter(array)
         recyclerView?.adapter = recyclerviewAdappter
+
         val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
                 if (result.resultCode == Activity.RESULT_OK) {
                     val name : String? = result.data?.extras?.getString("name")
                     val address : String? = result.data?.extras?.getString("address")
                     val phone : String? = result.data?.extras?.getString("phone")
-                    array.add(User(5, name.toString(), address.toString(), phone.toString()))
-                    recyclerviewAdappter.notifyDataSetChanged()
+                    val user = User(
+                        id = System.currentTimeMillis(),
+                        name = name ?: "",
+                        address = address ?: "",
+                        phone = phone ?:""
+                    )
+                    userDao?.insert(user)
+                    updateData()
                 }
             }
         linearLayout?.setOnClickListener {
@@ -52,19 +59,23 @@ class Man1Activity : AppCompatActivity() {
                         break
                     }
                 }
-                recyclerviewAdappter.notifyDataSetChanged()
+                recyclerviewAdappter?.notifyDataSetChanged()
             }
         }
-        recyclerviewAdappter.onclick = {
+        recyclerviewAdappter?.onclick = {
             val intent = Intent(this, Man3Activity::class.java)
-            val bundle = Bundle()
-            bundle.putSerializable("user", it)
-            intent.putExtra("data", bundle)
+            intent.putExtra("data", it)
             startForResult1.launch(intent)
         }
-        recyclerviewAdappter.onremove = {
+        recyclerviewAdappter?.onremove = {
             array.removeAt(it)
-            recyclerviewAdappter.notifyDataSetChanged()
+            recyclerviewAdappter?.notifyDataSetChanged()
         }
+    }
+
+    private fun updateData() {
+        array = userDao?.getAllUser() as ArrayList<User>
+        recyclerviewAdappter?.setArrayList(array)
+        recyclerviewAdappter?.notifyDataSetChanged()
     }
 }

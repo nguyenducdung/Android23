@@ -1,12 +1,12 @@
-package com.dungnd.android23
+package com.dungnd.android23.chuabtnv8
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.dungnd.android23.R
 
 class RecyclerviewAdappter(var array : ArrayList<User>) : RecyclerView.Adapter<RecyclerviewAdappter.Itemholder>() {
     class Itemholder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -14,6 +14,10 @@ class RecyclerviewAdappter(var array : ArrayList<User>) : RecyclerView.Adapter<R
         var tvaddress : TextView = itemView.findViewById(R.id.useraddress)
         var tvphone : TextView = itemView.findViewById(R.id.userphone)
         var imgremove : ImageView = itemView.findViewById(R.id.img_remove)
+    }
+
+    fun setArrayList(array : ArrayList<User>) {
+        this.array = array
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Itemholder {

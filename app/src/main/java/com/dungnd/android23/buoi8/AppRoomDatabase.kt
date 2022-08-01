@@ -4,11 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.dungnd.android23.chuabtnv8.User
+import com.dungnd.android23.chuabtnv8.UserDao
 
-@Database(entities = arrayOf(UserProfile::class), version = 1)
+@Database(entities = [UserProfile::class, User::class], version = 2)
 public abstract class AppRoomDatabase: RoomDatabase() {
 
     abstract fun userProfileDao(): UserProfileDao
+    abstract fun userDao(): UserDao
 
     companion object {
 

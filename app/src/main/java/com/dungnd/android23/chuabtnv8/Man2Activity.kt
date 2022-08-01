@@ -1,10 +1,11 @@
-package com.dungnd.android23
+package com.dungnd.android23.chuabtnv8
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.dungnd.android23.R
 
 class Man2Activity : AppCompatActivity() {
     private var edtname : EditText? = null
