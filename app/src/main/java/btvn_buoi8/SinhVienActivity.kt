@@ -25,7 +25,6 @@ class SinhVienActivity : AppCompatActivity() {
     private lateinit var tvAdd: TextView
     private val listSinhVien: MutableList<SinhVien> = ArrayList()
     private lateinit var reyclerviewAdapter: SinhVienAdapter
-    private var vRemove: ImageView? = null
     private val startForResult1 =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -58,7 +57,6 @@ class SinhVienActivity : AppCompatActivity() {
         setContentView(R.layout.activity_recycle_view_sinhvien)
         rcvData = findViewById(R.id.rcvData)
         tvAdd = findViewById(R.id.tvAdd)
-        vRemove = findViewById(R.id.vRemove)
         addData()
         setOnClickAdd()
         reyclerviewAdapter = SinhVienAdapter(listSinhVien)
@@ -79,19 +77,19 @@ class SinhVienActivity : AppCompatActivity() {
     private fun addData() {
         val sinhVienItem1 = SinhVien().apply {
             this.id = 1
-            this.tvName = "Tên:Võ Hữu Thịnh1"
+            this.tvName = "Tên:Võ Hữu Thịnh"
             this.tvAdress = "Địa chỉ: Triều khúc, Thanh Xuân, Hà Nội"
             this.tvPhone = "Phone: 0962890153"
         }
         val sinhVienItem2 = SinhVien().apply {
             this.id = 2
-            this.tvName = "vvvv"
+            this.tvName = "Võ Hữu Thịnh"
             this.tvAdress = "Địa chỉ: Triều khúc, Thanh Xuân, Hà Nội"
             this.tvPhone = "Phone: 0962890153"
         }
         val sinhVienItem3 = SinhVien().apply {
             this.id = 3
-            this.tvName = "abbbbb"
+            this.tvName = "Võ Hữu Thịnh"
             this.tvAdress = "Địa chỉ: Triều khúc, Thanh Xuân, Hà Nội"
             this.tvPhone = "Phone: 0962890153"
         }
