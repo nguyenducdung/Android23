@@ -19,6 +19,7 @@ class PlaySongService : Service() {
 
     private var mediaPlayer: MediaPlayer? = null
 
+    //Khởi tạo cách thành phần mà service chúng ta cần
     override fun onCreate() {
         super.onCreate()
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O)
@@ -63,8 +64,8 @@ class PlaySongService : Service() {
     /* Phương thức onStartCommand() trả về kiểu integer, và là một trong các giá trị sau:
      START_STICKY
      START_NOT_STICKY
-     TART_REDELIVER_INTENT
-     Cả hai giá trị này chỉ thích hợp khi điện thoại hết bộ nhớ và giết các dịch vụ trước khi nó kết thúc thực hiện.
+     START_REDELIVER_INTENT
+     flag START_STICKY chỉ thích hợp khi điện thoại hết bộ nhớ và giết các dịch vụ trước khi nó kết thúc thực hiện.
      START_STICKY nói với các hệ điều hành để tạo lại các dịch vụ sau khi đã có đủ bộ nhớ và gọi onStartCommand()
      một lần nữa với một Intent null.
      START_NOT_STICKY nói với các hệ điều hành để không bận tâm tái tạo các dịch vụ một lần nữa.
@@ -78,7 +79,6 @@ class PlaySongService : Service() {
     override fun onDestroy() {
         mediaPlayer?.release()
         super.onDestroy()
-
         val broadcastIntent = Intent()
         broadcastIntent.action = "restartservice"
         broadcastIntent.setClass(this, Restarter::class.java)
