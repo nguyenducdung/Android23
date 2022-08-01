@@ -16,3 +16,4 @@ rootProject.name = "Android23"
 include ':app'
 include ':tunanh'
 include ':tunanh_bai7'
+include ':bai8'
