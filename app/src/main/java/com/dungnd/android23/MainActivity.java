@@ -1,7 +1,11 @@
 package com.dungnd.android23;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +27,22 @@ public class MainActivity extends AppCompatActivity implements OnClick, View.OnC
     //Sự khác nhau giữa int và Integer là gì không?
     int position = 0; //kiểu số nguyên, không có trường hợp null (k có gì)
     Integer index = null; // có trường hợp null (rất dễ xảy ra crash khi sử dụng)
+
+    private PlaySongBinderService playSongBinderService;
+    private boolean binded = false;
+    ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            PlaySongBinderService.PlaySongBinder binder = (PlaySongBinderService.PlaySongBinder) iBinder;
+            playSongBinderService = binder.getService();
+            binded = true;
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            binded = false;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,8 +104,9 @@ public class MainActivity extends AppCompatActivity implements OnClick, View.OnC
             @Override
             public void onClick(View view) {
                 super.onClick(view);
-
-                startActivity(new Intent(MainActivity.this, Buoi8Activity.class));
+//                playSongBinderService.startMusic();
+                startService(new Intent(MainActivity.this, PlaySongService.class));
+//                startActivity(new Intent(MainActivity.this, Buoi8Activity.class));
             }
         });
         Database.INSTANCE.suaDuLieu();
@@ -115,7 +136,24 @@ public class MainActivity extends AppCompatActivity implements OnClick, View.OnC
     public void onClick(View view) {
 
     }
-//
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Intent intent = new Intent(this, PlaySongBinderService.class);
+        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+//        if (binded) {
+//            this.unbindService(serviceConnection);
+//            binded = false;
+//        }
+    }
+
+    //
 //    private int tinhTong(int a, int b) {
 //        StudentKotlin studentKotlin = new StudentKotlin();
 //        studentKotlin.setName("111");
