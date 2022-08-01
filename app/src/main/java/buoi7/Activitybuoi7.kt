@@ -14,13 +14,13 @@ import com.dungnd.android23.R
 
 class Activitybuoi7 : AppCompatActivity() {
     lateinit var rcvData: RecyclerView
-
+    lateinit var tvAdd: TextView
     companion object {
         val buoi7List: MutableList<Buoi7> = ArrayList()
     }
 
 
-    lateinit var tvAdd: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycle_view)

@@ -11,10 +11,10 @@ import com.dungnd.android23.R
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Buoi7Activity_Add : AppCompatActivity() {
-    lateinit var tvCancel: TextView
-    lateinit var edtPost: EditText
-    lateinit var edtContent: EditText
-    lateinit var tvSaveAdd: TextView
+    private lateinit var tvCancel: TextView
+    private lateinit var edtPost: EditText
+    private lateinit var edtContent: EditText
+    private lateinit var tvSaveAdd: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buoi7_add)
@@ -26,6 +26,7 @@ class Buoi7Activity_Add : AppCompatActivity() {
 
         tvSaveAdd.setOnClickListener {
             val buoi7item = Buoi7().apply {
+
                 this.tvName = edtPost.text.toString()
                 this.tvCmt = edtContent.text.toString()
             }
@@ -36,7 +37,7 @@ class Buoi7Activity_Add : AppCompatActivity() {
 
     }
 
-    fun setOnClickCancel() {
+    private fun setOnClickCancel() {
         tvCancel.setOnClickListener {
             val intent: Intent = Intent(this, Activitybuoi7::class.java)
             startActivity(intent)

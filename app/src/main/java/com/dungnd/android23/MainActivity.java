@@ -18,6 +18,7 @@ import com.dungnd.android23.recycleview.RecycleViewActivity;
 import BTVN_buoi5.KotlinActivity;
 import BTVN_buoi6_bai1.ChatActivity;
 import BTVN_buoi6_bai2.DogActivity;
+import btvn_buoi8.SinhVienActivity;
 import buoi7.Activitybuoi7;
 
 public class MainActivity extends AppCompatActivity {
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             //Khi bấm button, thì mở ra màn hình số 2
             // để mở ra màn hình mới thì chúng ta intent
 //            Log.d("hihi", "hihi");
-            Intent intent = new Intent(this, Activitybuoi7.class);
+            Intent intent = new Intent(this, SinhVienActivity.class);
             startActivity(intent);
             debug();
         });
