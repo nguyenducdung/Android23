@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".btvn_buoi8.BtvnBuoi8OneActivity">
+
+    <include layout="@layout/layouttoolbar_buoi8one"
+        android:id="@+id/layoutToolbarOne"/>
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_below="@id/layoutToolbarOne"
+        android:background="@drawable/b8oneuserbg"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:text="Vo Huu Thinh"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <EditText
+        android:id="@+id/edtAddr"
+        android:layout_below="@id/edtName"
+        android:background="@drawable/b8oneuserbg"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:text="Trieu khuc, thanh xuan"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_below="@id/edtAddr"
+        android:background="@drawable/b8oneuserbg"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:text="0123456789"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <TextView
+        android:id="@+id/tvSave"
+        android:text="Luu"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/save_userbg"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/edtPhone"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"/>
+
+</RelativeLayout>
