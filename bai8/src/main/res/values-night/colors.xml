@@ -8,9 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="text_blue">#007AFF</color>
-
-    <color name="textcolor1">#000000</color>
+    <color name="textcolor1">#FFFFFFFF</color>
     <color name="colorOnPrimary">#FFF42A</color>
-    <color name="ic_plus_backround">#E2F4F8</color>
-    <color name="edt_background">#EFEFF4</color>
+    <color name="ic_plus_backround">#273543</color>
+    <color name="edt_background">#282833</color>
 </resources>

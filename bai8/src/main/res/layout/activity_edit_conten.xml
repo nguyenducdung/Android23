@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".EditConten">
+
+    <include layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/edt_folder_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_background"
+        android:hint="@string/enter_sv_name"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/textcolor1"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_sv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_background"
+        android:gravity="start"
+        android:hint="@string/enter_sv_address"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/textcolor1"
+        android:textSize="20sp"
+
+        />
+
+    <EditText
+        android:id="@+id/edt_sv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_background"
+        android:gravity="start"
+        android:hint="@string/enter_sv_phone"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textColor="@color/textcolor1"
+        android:textSize="20sp"
+
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/ic_plus_backround"
+        android:text="@string/save"
+        android:textAllCaps="false" />
+
+
+</LinearLayout>
