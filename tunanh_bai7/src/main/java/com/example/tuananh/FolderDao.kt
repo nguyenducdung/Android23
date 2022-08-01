@@ -4,7 +4,7 @@ import androidx.room.*
 
 @Dao
 interface FolderDao {
-    @Query("SELECT * FROM folder ORDER BY id ASC")
+    @Query("SELECT * FROM folder ORDER BY id DESC")
     fun getAllFolder(): List<FolderModel>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

@@ -1,13 +1,11 @@
 package com.example.tuananh
-import android.os.Parcel
-import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName="folder")
 data class FolderModel(
-    @PrimaryKey(autoGenerate = true)
-    var id:Int=0,
+    @PrimaryKey
+    var id: Int ,
     var title:String="",
     var content: String="")
 

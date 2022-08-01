@@ -32,20 +32,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun getFolder() {
-        val fdList=sqlite.folderitemDao().getAllFolder()
-        Log.e("Main","${fdList.size}")
-        adapter?.additem(fdList as ArrayList<FolderModel>)
-    }
+//    private fun getFolder() {
+//        val fdList=sqlite.folderitemDao().getAllFolder()
+//        Log.e("Main","${fdList.size}")
+//        adapter?.additem(fdList as ArrayList<FolderModel>)
+//    }
 
     private fun initRecyclerView() {
         rclv.layoutManager = LinearLayoutManager(this)
-        adapter = FolderAdapter()
-        getFolder()
+
+        val fdList=sqlite.folderitemDao().getAllFolder() as ArrayList<FolderModel>
+        Log.e("Main","${fdList.size}")
+        adapter = FolderAdapter(this,fdList)
         rclv.adapter = adapter
         adapter?.onItemClick={folder,position->
             val intent=Intent(this,EditConten::class.java)
             intent.putExtra(type,true)
+            intent.putExtra("id",folder.id)
             intent.putExtra("title",folder.title)
             intent.putExtra("content",folder.content)
             startActivity(intent)

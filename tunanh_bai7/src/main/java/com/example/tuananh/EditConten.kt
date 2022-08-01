@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import java.util.*
 
 //import androidx.recyclerview.widget.RecyclerView
 
@@ -21,7 +22,7 @@ class EditConten : AppCompatActivity() {
     //    var rclv: RecyclerView? = null
     var edt_title: EditText? = null
     var edt_description: EditText? = null
-    private var sqlite: Sqlite?=null
+//    private var sqlite: Sqlite?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_conten)
@@ -44,7 +45,7 @@ class EditConten : AppCompatActivity() {
             super.onBackPressed()
         }
         tv_center!!.text = getText(R.string.edit)
-        val folder = FolderModel(title = intent.extras?.getString("title").toString(), content = intent.extras?.getString("content").toString())
+        val folder = FolderModel(intent.extras?.getInt("id")!!.toInt(),title = intent.extras?.getString("title").toString(), content = intent.extras?.getString("content").toString())
 //        folder.title= intent.extras?.getString("title").toString()
 //        folder.content=intent.extras?.getString("content").toString()
 
@@ -61,7 +62,7 @@ class EditConten : AppCompatActivity() {
             } else {
                 folder.title = name
                 folder.content = description
-                sqlite?.folderitemDao()?.update(folder)
+                Sqlite.getDatabase(this).folderitemDao().update(folder)
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
@@ -90,8 +91,8 @@ class EditConten : AppCompatActivity() {
         if (name.isEmpty() || description.isEmpty()) {
             Toast.makeText(this, getString(R.string.back), Toast.LENGTH_SHORT).show()
         } else {
-            val fd = FolderModel( title = name, content = description)
-            sqlite?.folderitemDao()?.insert(fd)
+            val fd = FolderModel(id =System.currentTimeMillis().toInt(), title = name, content = description)
+            Sqlite.getDatabase(this).folderitemDao().insert(fd)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
