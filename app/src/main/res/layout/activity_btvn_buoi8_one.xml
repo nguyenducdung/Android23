@@ -47,20 +47,21 @@
         android:fontFamily="@font/roboto_regular"
         android:layout_width="match_parent"
         android:layout_height="44dp"/>
+
     <TextView
         android:id="@+id/tvSave"
-        android:text="Luu"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/save_userbg"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/edtPhone"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/edtPhone"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="70dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="70dp"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"/>
+        android:background="@drawable/save_userbg"
+        android:gravity="center"
+        android:text="Luu"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
 </RelativeLayout>

@@ -21,7 +21,7 @@ class BtvnBuoi8Adapter(val userList :List<User>) :RecyclerView.Adapter<BtvnBuoi8
         }
 
     }
-    var onClickItem :( (User) -> Unit)? = null
+    var onClickItem :( (User,Int) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserVH {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_user,parent,false)
@@ -30,6 +30,9 @@ class BtvnBuoi8Adapter(val userList :List<User>) :RecyclerView.Adapter<BtvnBuoi8
 
     override fun onBindViewHolder(holder: UserVH, position: Int) {
         holder.setData(userList[position])
+        holder.itemView.setOnClickListener{
+            onClickItem?.invoke(userList[position],position)
+        }
 
     }
 
