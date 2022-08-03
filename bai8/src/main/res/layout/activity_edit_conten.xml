@@ -21,7 +21,8 @@
         android:maxLines="1"
         android:padding="12dp"
         android:textColor="@color/textcolor1"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:autofillHints="name" />
 
     <EditText
         android:id="@+id/edt_sv_address"
