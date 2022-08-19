@@ -14,7 +14,7 @@ import java.util.List;
 
 //Hiển thị danh sách học sinh trong lớp
 //Có 2 cách để truyền dữ liệu vào adapter (dùng constructor, set get)
-class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
+public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
 
     private List<Student> studentList = null;
     private OnItemClick onItemClick;
@@ -90,7 +90,7 @@ class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHold
         }
     }
 
-    interface OnItemClick {
+    public interface OnItemClick {
         //bấm vào tên
        void clickName(String name);
 

@@ -17,6 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".buoi4.RecycleViewMergeAdapterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".buoi4.RecycleViewGridActivity"
+            android:exported="false" />
+        <activity
+            android:name=".buoi4.RecycleViewHorizontalActivity"
+            android:exported="false" />
+        <activity
             android:name=".recycleview.RecycleViewActivity"
             android:exported="false" />
         <activity
